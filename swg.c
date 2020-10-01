@@ -3,37 +3,43 @@
 int SWG(char you,char comp)
 {
     
+    //if both are equal
         if(you==comp)
         {
             printf("GAME DRAW\n");
             return 0;
         }
+    //if you choose snake and computer choose water
         if(you=='s' && comp=='w')
         {
             printf("YOU WON\n");
             return 1;
         }
+    //if you choose water and computer choose snake
         else if(you=='w' && comp=='s')
         {
-            printf("YOU LOSS\n");
+            printf("YOU LOOSE\n");
             return -1;
         }
-
+    //if you choose water and computer choose gun
         if(you=='w' && comp=='g')
         {
             printf("YOU WON\n");
             return 1;
         }
+    //if you choose gun and computer choose water
         else if(you=='g' && comp=='w')
         {
-            printf("YOU LOSS\n");
+            printf("YOU LOOSE\n");
             return -1;
         }
+    //if you choose snake and computer choose gun
         if(you=='s' && comp=='g')
         {
-            printf("YOU LOSS\n");
+            printf("YOU LOOSE\n");
             return -1;
         }
+    //if you choose gun and computer choose snake
         else if(you=='g' && comp=='s')
         {
             printf("YOU WON\n");
@@ -77,14 +83,14 @@ void main()
                 printf("Computer Chooses:%c\n",comp);
                 result = SWG(you,comp);
                 count+=result;
-                printf("your score is:%d",result);
+                printf("Your score is:%d",result);
                 
                 printf("\n----------%d time-------------\n",i);
                 i++;
     }
             
 
-          printf("your final score is:%d",count);
+          printf("Your final score is:%d",count);
 }
 
 //Khushi Pitroda
